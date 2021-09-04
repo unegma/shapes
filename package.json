@@ -10,8 +10,8 @@
   "scripts": {
     "test": "mocha -r esm ./tests/index.spec.js",
     "update-install": "npm update; npm install",
-    "build": "babel lib -d dist --ignore src/**/*.test.js,**/tests/** && tsc",
     "pub": "npm run-script build; npm publish --access public",
+    "build": "babel lib -d dist --ignore src/**/*.test.js,**/tests/** && tsc",
     "unpublish-single-version": "npm unpublish <package-name>@<version>"
   },
   "repository": "git@github.com:unegma/shapes.git",
