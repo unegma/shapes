@@ -6,8 +6,8 @@ Math Utility functions for creating shapes
 `npm install @unegma/shapes --save`
 
 ```
-import { shapes } from "@unegma/shapes";
-
+import * as shapes from '@unegma/shapes';
+let result = shapes.createCluster(1);
 ```
 
 ## Testing
