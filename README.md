@@ -9,3 +9,6 @@ Math Utility functions for creating shapes
 import { shapes } from "@unegma/shapes";
 
 ```
+
+## Testing
+May need to add `-r esm` to mocha options in IDE
