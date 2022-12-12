@@ -10,6 +10,7 @@
   "scripts": {
     "test": "mocha -r esm ./tests/index.spec.js",
     "update-install": "npm update && npm install",
+    "build": "rm -rf ./dist && npx tsc",
     "pub-major": "npm run build && npm version major --force && npm publish --access public && git push && git push --tags",
     "pub-minor": "npm run build && npm version minor --force && npm publish --access public && git push && git push --tags",
     "pub-patch": "npm run build && npm version patch --force && npm publish --access public && git push && git push --tags",
