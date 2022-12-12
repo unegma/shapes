@@ -5,24 +5,21 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "/dist"
   ],
   "scripts": {
     "test": "mocha -r esm ./tests/index.spec.js",
-    "update-install": "npm update; npm install",
-    "pub": "npm run-script build; npm publish --access public",
-    "build": "babel lib -d dist --ignore src/**/*.test.js,**/tests/** && tsc",
+    "update-install": "npm update && npm install",
+    "pub-major": "npm run build && npm version major --force && npm publish --access public && git push && git push --tags",
+    "pub-minor": "npm run build && npm version minor --force && npm publish --access public && git push && git push --tags",
+    "pub-patch": "npm run build && npm version patch --force && npm publish --access public && git push && git push --tags",
     "unpublish-single-version": "npm unpublish <package-name>@<version>"
   },
   "repository": "git@github.com:unegma/shapes.git",
   "author": "tim@unegma.com",
   "license": "MIT",
   "devDependencies": {
-    "@babel/cli": "^7.7.4",
-    "@babel/core": "^7.7.4",
-    "@babel/plugin-transform-runtime": "^7.13.10",
-    "@babel/preset-env": "^7.7.4",
-    "@babel/register": "^7.7.4",
+    "@types/three": "^0.146.0",
     "chai": "^4.3.4",
     "coveralls": "^3.0.2",
     "dotenv": "^8.2.0",

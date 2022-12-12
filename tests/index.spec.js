@@ -1,6 +1,6 @@
 import chai from "chai";
 const expect = chai.expect;
-import * as shapes from '../lib/index';
+import * as shapes from '../lib';
 
 describe('Tests', () => {
 

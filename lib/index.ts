@@ -10,7 +10,7 @@ import {randFloat} from "three/src/math/MathUtils";
  * @param {number} index
  * @returns {{pos1: number, pos2: number, pos3: number}}
  */
-export function createCluster(index) {
+export function createCluster(index: number) {
   // create co-ordinates based on the a number between 0 and the index of the item (higher index = older item)
   // the second part randomly creates 1 or negative 1 to add depth along each axis
   let pos1 = randFloat(0, index) * getRandomOneOrNegativeOne();
@@ -25,7 +25,7 @@ export function createCluster(index) {
  * @param {number} index
  * @returns {{pos1: number, pos2: number, pos3: number}}
  */
-export function createSpiral(index) {
+export function createSpiral(index: number) {
   // create co-ordinates based on the a number between 0 and the index of the item (higher index = older item)
   // the second part randomly creates 1 or negative 1 to add depth along each axis
   let pos1 = 7*Math.sin(index) *-1;
@@ -40,7 +40,7 @@ export function createSpiral(index) {
  * @param {number} index
  * @returns {{pos1: number, pos2: number, pos3: number}}
  */
-export function createGoldenSpiral(index) {
+export function createGoldenSpiral(index: number) {
   // // https://www.reddit.com/r/theydidthemath/comments/286tqb/3d_golden_spiral_equation/
   const exponent = 0.306349; // growth factor in Radians: `ln(phi)/(pi/2)` OR in Degrees: `ln(phi)/90`
   const angle = index;// theta
@@ -61,7 +61,7 @@ export function createGoldenSpiral(index) {
  * @param {number} index
  * @returns {{pos1: number, pos2: number, pos3: number}}
  */
-export function createSwirl(index) {
+export function createSwirl(index: number) {
   // // https://www.reddit.com/r/theydidthemath/comments/286tqb/3d_golden_spiral_equation/
   // const exponent2 = 0.306349; // growth factor in Radians: `ln(phi)/(pi/2)` OR in Degrees: `ln(phi)/90`
   const exponent2 = 0.1; // growth factor in Radians: `ln(phi)/(pi/2)` OR in Degrees: `ln(phi)/90`
